@@ -1,0 +1,71 @@
+        <div class="content-header row">
+          <div class="content-header-left col-md-6 col-xs-12 mb-1">
+            <h2 class="content-header-title">Customers Table</h2>
+          </div>
+        </div>
+        <div class="content-body">
+<div class="col-xs-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Table options</h4>
+                <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+                        <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                        <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+                        <li><a data-action="close"><i class="icon-cross2"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body collapse in">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>Name</th>
+                                <th>Title</th>
+                                <th>Company</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each posts}}
+                            <tr>
+                                <th scope="row">{{name}}</th>
+                                <td>{{title}}</td>
+                                <td>{{company}}</td>
+                                <td>{{email}}</td>
+                                <td>{{contact}}</td>
+                                <td>{{formatDate date day="numeric" month="long" year="numeric"}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-warning btn-block" data-toggle="modal" data-target="#exampleModalCenter1">Edit</button>
+                                    {{> management/edit }}
+                                    <button type="button" class="btn btn-sm btn-danger btn-block" data-toggle="modal" data-target="#exampleModalCenter">Delete</button>
+                                        {{> management/alert }}
+                                    
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        <thead class="thead-inverse">
+                            <tr>
+                                 <th>Name</th>
+                                <th>Title</th>
+                                <th>Company</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                    </table>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

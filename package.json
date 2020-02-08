@@ -1,0 +1,36 @@
+{
+  "name": "sellnmanage",
+  "version": "1.0.0",
+  "description": "This is my first Product to be launched",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maxhar30/Sell_n_manage.git"
+  },
+  "author": "Mazhar Hussain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maxhar30/Sell_n_manage/issues"
+  },
+  "homepage": "https://github.com/Maxhar30/Sell_n_manage#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-flash-messages": "^0.1.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "handlebars-dateformat": "^1.1.1",
+    "handlebars-intl": "^1.1.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.8.11"
+  },
+  "devDependencies": {
+    "handlebars": "^4.5.0",
+    "nodemon": "^2.0.2"
+  }
+}
