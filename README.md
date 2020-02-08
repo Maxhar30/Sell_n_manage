@@ -1,13 +1,12 @@
 ># Under Construction
 ------------
-
-#SellnManage
+SellnManage
 
 A complete  management system for multiple store. 
 ------------
 
 
-##Features
+Features
 
 -  Easly Useable
 - User Friendly UI/UX
