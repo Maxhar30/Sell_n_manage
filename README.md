@@ -2,7 +2,7 @@
 ------------
 # SellnManage
 
-A complete  management system for multiple store. 
+A complete  management system for multiple store in Nodejs
 ------------
 
 
