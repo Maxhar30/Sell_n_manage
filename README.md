@@ -2,12 +2,13 @@
 ------------
 
 #SellnManage
-A complete  management system for multiple store. 
 
+A complete  management system for multiple store. 
 ------------
 
 
 ##Features
+
 -  Easly Useable
 - User Friendly UI/UX
 - Product Management
