@@ -29,6 +29,14 @@ module.exports={
           res.redirect('/management');
         });
   },
+  deleteProduct: (req, res)=>{
+    Product.findByIdAndDelete(req.params.id)
+    .then(deletedProduct =>{
+
+    res.redirect('/management/product/');
+    });
+  },
+
   customers: (req, res)=>{
     Post.find().sort({"date": -1}).then(posts =>{
       res.render('management/customers',{posts: posts});
@@ -51,6 +59,14 @@ module.exports={
         res.redirect('/management');
       }); 
   },
+  deletePost: (req, res) =>{
+    Post.findByIdAndDelete(req.params.id)
+    .then(deletedPost =>{
+        req.flash('success-message', `Post ${deletedPost.title} Deleted SuccessFully`);
+        res.redirect('/management/customer');
+    });
+},
+
   invoice: (req, res)=>{
     res.render('management/invoice');
   },

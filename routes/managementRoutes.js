@@ -16,6 +16,9 @@ router.route('/product')
 router.route('/add-product')
     .get(managementRoutes.addproduct)
     .post(managementRoutes.productPost);
+
+router.route('/product/delete/:id')
+    .delete(managementRoutes.deleteProduct);
     
 
 router.route('/customer')
@@ -25,6 +28,8 @@ router.route('/add-customer')
     .get(managementRoutes.addcustomer)
     .post(managementRoutes.customersPost);
 
+router.route('/customer/delete/:id')
+    .delete(managementRoutes.deletePost);
 
 router.route('/invoice')
     .get(managementRoutes.invoice);

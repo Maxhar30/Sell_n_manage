@@ -9,6 +9,7 @@ const flash = require('express-flash-messages');
 const {globalVariables} = require('./config/configuration');
 var HandlebarsIntl = require('handlebars-intl');
 var Handlebars     = require('handlebars');
+var methodOverRide =  require('method-override');
 
 
 
@@ -30,11 +31,15 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Method OverRide For Deleteing Post
+app.use(methodOverRide('newMethod'));
+
 app.use(session({
     secret : 'anysecret',
     saveUninitialized: true,
     resave: true
 }));
+
 
 app.use(flash());
 app.use(globalVariables);
