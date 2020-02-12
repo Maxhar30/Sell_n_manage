@@ -1,0 +1,98 @@
+ <div class="content-header row">
+        </div>
+ <div class="content-body"><!-- Basic form layout section start -->
+<section id="basic-form-layouts">
+       <div class="row">
+		<div class="col-md-6 offset-md-3">
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title" id="basic-layout-card-center">Update Product</h4>
+					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+					<div class="heading-elements">
+						<ul class="list-inline mb-0">
+							<li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+							<li><a data-action="reload"><i class="icon-reload"></i></a></li>
+							<li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+							<li><a data-action="close"><i class="icon-cross2"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-body collapse in">
+					<div class="card-block">
+						<form class="form" method="POST" action="/management/product/edit/{{post._id}}?newMethod=PUT" method="POST">
+							<div class="form-body">
+
+								<div class="form-group">
+									<label for="eventRegInput1">Product Name</label>
+									<input type="text" id="eventRegInput1" class="form-control" placeholder="Name" name="pname" value={{product.pname}}>
+								</div>
+
+								<div class="form-group">
+									<label for="eventRegInput2">Product Code</label>
+									<input type="text" id="eventRegInput2" class="form-control" placeholder="Product Code" name="pcode" value={{product.pcode}}>
+								</div>
+
+								<div class="form-group">
+									<label for="eventRegInput3">Company</label>
+									<input type="text" id="eventRegInput3" class="form-control" placeholder="Company" name="pcompany" value={{product.pcompany}}>
+								</div>
+                                <div class="form-group">
+									<label for="issueinput5">Category</label>
+									<select id="issueinput5" name="category" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Category">
+										<option value="low">Gym</option>
+										<option value="medium">Medicine</option>
+										<option value="high">Sports</option>
+									</select>
+								</div>
+                                <div class="form-group">
+									<label for="Quantity">Quantity</label>
+									<input type="number" id="Quantity" class="form-control square" name="pquantity" value={{product.pquantity}}>
+								</div>
+
+
+									<div class="form-group">
+									<label>Price</label>
+									<div class="input-group">
+										<span class="input-group-addon">Rs</span>
+										<input type="text" class="form-control" placeholder="Purchased Price" aria-label="Amount (to the nearest dollar)" name="price" value={{product.price}}>
+										<span class="input-group-addon">.00</span>
+									</div>
+								</div>
+
+
+									<div class="form-group">
+									<label>Price to be sold</label>
+									<div class="input-group">
+										<span class="input-group-addon">Rs</span>
+										<input type="text" class="form-control" placeholder="Price to be sold on" aria-label="Amount (to the nearest dollar)" name="pprice" value={{product.pprice}}>
+										<span class="input-group-addon">.00</span>
+									</div>
+								</div>
+
+								
+							</div>
+                            <div class="form-group">
+									<label>Product Photo</label>
+									<label id="projectinput7" class="file center-block">
+										<input type="file" id="file">
+										<span class="file-custom"></span>
+									</label>
+								</div>
+
+							<div class="form-actions center">
+								<button type="button" class="btn btn-primary mr-1">
+									<i class="icon-cross2"></i> Cancel
+								</button>
+								<button type="submit" class="btn btn-warning">
+									<i class="icon-check2"></i> Update
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+

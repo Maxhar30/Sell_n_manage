@@ -1,0 +1,62 @@
+        <div class="content-header row">
+        </div>
+ <div class="content-body"><!-- Basic form layout section start -->
+<section id="basic-form-layouts">
+       <div class="row">
+		<div class="col-md-6 offset-md-3">
+			<div class="card">
+				<div class="card-header">
+					<h4 class="card-title" id="basic-layout-card-center">Update Note</h4>
+					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+					<div class="heading-elements">
+						<ul class="list-inline mb-0">
+							<li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
+							<li><a data-action="reload"><i class="icon-reload"></i></a></li>
+							<li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+							<li><a data-action="close"><i class="icon-cross2"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-body collapse in">
+					<div class="card-block">
+						<form class="form" action="/management/" method="POST">
+							<div class="form-body">
+
+								<div class="form-group">
+									<label for="eventRegInput1">Note Title</label>
+									<input type="text" id="eventRegInput1" class="form-control" value={{note.ntitle}}  name="ntitle">
+								</div>
+                            <div class="form-group">
+									<label for="donationinput7">Note</label>
+									<textarea id="donationinput7" rows="5" class="form-control square"  name="note" ></textarea>
+								</div>
+                            <div class="form-group">
+									<label for="complaintinput3">Note For Date</label>
+									<input type="date" id="complaintinput3" class="form-control round" name="notedate">
+								</div>
+								
+                            <div class="form-group">
+									<label>Select Photo</label>
+									<label id="projectinput7" class="file center-block">
+										<input type="file" id="file">
+										<span class="file-custom"></span>
+									</label>
+								</div>
+
+							<div class="form-actions center">
+								<button type="button" class="btn btn-warning mr-1">
+									<i class="icon-cross2"></i> Cancel
+								</button>
+								<button type="submit" class="btn btn-primary">
+									<i class="icon-check2"></i> Save
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+	

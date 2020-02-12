@@ -1,7 +1,7 @@
 
         <div class="content-header row">
           <div class="content-header-left col-md-6 col-xs-12 mb-1">
-            <h2 class="content-header-title">Products Table</h2>
+            <h2 class="content-header-title">Notes Table</h2>
           </div>
         </div>
         <div class="content-body">
@@ -40,9 +40,9 @@
                                 <td>{{formatDate date day="numeric" month="long" year="numeric"}}</td>
                                  <td>
                                     <button type="button" class="btn btn-sm btn-warning btn-block" data-toggle="modal" data-target="#exampleModalCenter1">Edit</button>
-                                    {{> management/edit }}
+                                        {{> management/messages/noteEdit }}
                                     <button type="button" class="btn btn-sm btn-danger btn-block" data-toggle="modal" data-target="#exampleModalCenter">Delete</button>
-                                        {{> management/alert }}
+                                        {{> management/messages/noteDelete }}
                                     
                                 </td>
                             </tr>

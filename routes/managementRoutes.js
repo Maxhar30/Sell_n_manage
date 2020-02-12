@@ -19,6 +19,10 @@ router.route('/add-product')
 
 router.route('/product/delete/:id')
     .delete(managementRoutes.deleteProduct);
+
+router.route('/editproduct/:id')
+    .get(managementRoutes.editProduct);
+    //.put(manageController.editProductSubmit);
     
 
 router.route('/customer')
@@ -31,6 +35,10 @@ router.route('/add-customer')
 router.route('/customer/delete/:id')
     .delete(managementRoutes.deletePost);
 
+router.route('/editcustomer/:id')
+    .get(managementRoutes.editCustomer);
+    //.put(manageController.editProductSubmit);
+
 router.route('/invoice')
     .get(managementRoutes.invoice);
 
@@ -41,5 +49,14 @@ router.route('/notes')
 router.route('/add-notes')
     .get(managementRoutes.addnotes)
     .post(managementRoutes.notePost);
+    
+router.route('/notes/delete/:id')
+    .delete(managementRoutes.deleteNote);
+
+router.route('/editnote/:id')
+    .get(managementRoutes.editNote);
+    //.put(manageController.editProductSubmit);
+
+
 
 module.exports = router;

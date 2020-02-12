@@ -36,6 +36,13 @@ module.exports={
     res.redirect('/management/product/');
     });
   },
+  editProduct : (req, res)=> {
+    const id = req.params.id;
+    Product.findById(id)
+    .then( product =>{
+        res.render('management/editProduct', {product: product});
+    }); 
+  },
 
   customers: (req, res)=>{
     Post.find().sort({"date": -1}).then(posts =>{
@@ -58,6 +65,13 @@ module.exports={
         console.log('Done');
         res.redirect('/management');
       }); 
+  },
+  editCustomer : (req, res)=> {
+    const id = req.params.id;
+    Post.findById(id)
+    .then( post =>{
+        res.render('management/editcustomer', {post: post});
+    }); 
   },
   deletePost: (req, res) =>{
     Post.findByIdAndDelete(req.params.id)
@@ -88,5 +102,18 @@ module.exports={
       console.log('Note Added Successfully');
       res.redirect('/management');
     })
-  }
+  },
+  deleteNote: (req, res) =>{
+    Note.findByIdAndDelete(req.params.id)
+    .then(deletedPost =>{
+        res.redirect('/management/notes');
+    });
+},
+editNote : (req, res)=> {
+  const id = req.params.id;
+  Note.findById(id)
+  .then( note =>{
+      res.render('management/editnote', {note : note});
+  }); 
+},
 };
